@@ -546,7 +546,7 @@ function KineticHero({ accent, mounted, reduced }: { accent: string; mounted: bo
 
 function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: boolean; reduced: boolean }) {
   return (
-    <div className="mp-grain relative flex min-h-[88svh] items-center overflow-hidden px-5 pb-16 pt-24 md:px-12 md:pb-20 md:pt-28">
+    <div className="mp-grain relative flex min-h-[88svh] items-center overflow-hidden px-5 pb-12 pt-20 md:px-12 md:pb-16 md:pt-20">
       {/* Single light source behind the headline */}
       <div className="mp-glow left-[-10%] top-[10%] h-[420px] w-[420px] md:h-[620px] md:w-[620px]" aria-hidden />
       <div className="mp-glow bottom-[-10%] right-[-5%] h-[320px] w-[320px] opacity-60 md:h-[480px] md:w-[480px]" aria-hidden />
@@ -584,7 +584,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
           {/* Heading — massive, tilted, overlapping */}
           <div className="relative">
             <motion.h1
-              className="text-[clamp(2.75rem,11.5vw,10rem)] leading-[0.8] -tracking-[0.04em]"
+              className="text-[clamp(2.5rem,7.5vw,10rem)] leading-[0.94] -tracking-[0.02em]"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -599,7 +599,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
             </motion.h1>
 
             <motion.h1
-              className="text-[clamp(2.75rem,11.5vw,10rem)] leading-[0.8] -tracking-[0.04em] -mt-2 md:-mt-4"
+              className="text-[clamp(2.5rem,7.5vw,10rem)] leading-[0.94] -tracking-[0.02em] -mt-1 md:-mt-2"
               style={{ color: accent }}
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -615,7 +615,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
             </motion.h1>
 
             <motion.h1
-              className="text-[clamp(2.75rem,11.5vw,10rem)] leading-[0.8] -tracking-[0.04em] -mt-2 md:-mt-4"
+              className="text-[clamp(2.5rem,7.5vw,10rem)] leading-[0.94] -tracking-[0.02em] -mt-1 md:-mt-2"
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -627,7 +627,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
 
             {/* "Awards" with color block behind it */}
             <motion.div
-              className="relative inline-block -mt-2 md:-mt-4"
+              className="relative inline-block -mt-1 md:-mt-2"
               initial={{ opacity: 0, y: 60, rotate: 3 }}
               animate={{ opacity: 1, y: 0, rotate: 2 }}
               transition={{ delay: 0.85, duration: 0.6 }}
@@ -636,7 +636,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
                 className="absolute inset-0 -inset-x-4 -inset-y-2"
                 style={{ backgroundColor: `${accent}20` }}
               />
-              <h1 className="text-[clamp(2.75rem,11.5vw,10rem)] leading-[0.8] -tracking-[0.04em] relative" style={{ color: accent }}>
+              <h1 className="text-[clamp(2.5rem,7.5vw,10rem)] leading-[0.94] -tracking-[0.02em] relative" style={{ color: accent }}>
                 Awards
               </h1>
             </motion.div>
@@ -645,13 +645,13 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
 
         {/* Right side — description + buttons, offset vertically */}
         <motion.div
-          className="lg:col-span-4 lg:col-start-9 flex flex-col justify-end mt-12 lg:mt-0 lg:pb-12"
+          className="lg:col-span-5 lg:col-start-8 flex flex-col justify-center mt-12 lg:mt-0"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.6 }}
         >
           {/* Description — raw, no container */}
-          <p className="text-lg md:text-xl text-muted-foreground leading-snug mb-8 max-w-sm">
+          <p className="text-lg md:text-xl 2xl:text-2xl text-muted-foreground leading-snug mb-8 max-w-md 2xl:max-w-lg">
             The animation toolkit for developers who refuse to build boring.
             <span className="block mt-2 text-foreground font-bold">Rules are suggestions.</span>
           </p>
@@ -660,7 +660,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
           <div className="flex flex-col gap-3">
             <motion.a
               href="#components"
-              className="inline-flex w-full items-center px-5 py-4 text-base font-extrabold border-[3px] transition-transform hover:translate-x-1 hover:-translate-y-1 sm:px-6 sm:text-lg"
+              className="inline-flex w-full items-center px-5 py-4 text-base font-extrabold border-[3px] transition-transform hover:translate-x-1 hover:-translate-y-1 sm:px-6 sm:text-lg 2xl:py-5 2xl:text-xl"
               style={{ borderColor: accent, color: accent }}
               whileHover={{ rotate: -1 }}
             >
@@ -669,7 +669,7 @@ function FreestyleHero({ accent, mounted, reduced }: { accent: string; mounted: 
             </motion.a>
             <motion.a
               href="#directions"
-              className="inline-flex w-full items-center border-[3px] border-foreground/30 px-5 py-4 text-base font-extrabold text-foreground/70 transition-all hover:translate-x-1 hover:-translate-y-1 hover:border-foreground hover:text-foreground sm:px-6 sm:text-lg"
+              className="inline-flex w-full items-center border-[3px] border-foreground/30 px-5 py-4 text-base font-extrabold text-foreground/70 transition-all hover:translate-x-1 hover:-translate-y-1 hover:border-foreground hover:text-foreground sm:px-6 sm:text-lg 2xl:py-5 2xl:text-xl"
               whileHover={{ rotate: 1 }}
             >
               SEE DIRECTIONS
